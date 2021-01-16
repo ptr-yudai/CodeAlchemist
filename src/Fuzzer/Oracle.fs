@@ -47,8 +47,11 @@ module Oracle =
 
   let isMOZBug (struct (ret, out, err)) = isCrash ret
 
+  let isQJSBug (struct (ret, out, err)) = isCrash ret
+
   let getOracle = function
     | V8 -> isV8Bug
     | Chakra -> isChakraBug
     | JSC -> isJSCBug
     | MOZ -> isMOZBug
+    | QJS -> isQJSBug

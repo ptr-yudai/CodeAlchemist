@@ -18,6 +18,7 @@
     <None Include="jsLib/Chakra.js" CopyToOutputDirectory="PreserveNewest" />
     <None Include="jsLib/JSC.js" CopyToOutputDirectory="PreserveNewest" />
     <None Include="jsLib/MOZ.js" CopyToOutputDirectory="PreserveNewest" />
+    <None Include="jsLib/QJS.js" CopyToOutputDirectory="PreserveNewest" />
   </ItemGroup>
 
 </Project>

@@ -500,6 +500,7 @@ let getJsLibPath engine =
 
 let getLoader = function
   | Chakra -> sprintf "WScript.LoadScriptFile('%s');\n"
+  | QJS -> sprintf "std.loadScript('%s');\n"
   | engine -> sprintf "load('%s');\n"
 
 let mkLoader engine = getJsLibPath engine |> getLoader engine

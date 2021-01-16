@@ -10,6 +10,7 @@ type Engine =
   | Chakra
   | JSC
   | MOZ
+  | QJS
 
 type Conf = {
   Engine: Engine
@@ -40,6 +41,7 @@ module Conf =
     | "Chakra" -> Chakra
     | "JSC" -> JSC
     | "MOZ" -> MOZ
+    | "QJS" -> QJS
     | e -> Logger.error "Not supported engine: %s" e
 
   let private getProp json key =
@@ -94,3 +96,4 @@ module Conf =
     | Chakra -> "Chakra"
     | JSC -> "JSC"
     | MOZ -> "MOZ"
+    | QJS -> "QJS"
